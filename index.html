@@ -33,12 +33,6 @@
       linear-gradient(rgba(255,255,255,0.055) 1px, transparent 1px),
       linear-gradient(90deg, rgba(255,255,255,0.055) 1px, transparent 1px);
     background-size: 56px 56px;
-    /* abstract stepped tower silhouette */
-    clip-path: polygon(22% 0%, 78% 0%, 78% 26%, 100% 26%, 100% 100%, 0% 100%, 0% 26%, 22% 26%);
-  }
-  .building .roof{
-    position:absolute; left:22%; right:22%; top:0; height:10px;
-    background:rgba(255,255,255,0.06);
   }
   .building .win{
     position:absolute; border:1px solid rgba(255,255,255,0.08);
@@ -198,7 +192,7 @@
     letter-spacing:0.08em; text-transform:uppercase; color:rgba(255,255,255,0.6);
   }
   .letter-text p{ margin:0 0 16px; font-size:14px; }
-  .letter-text p.lede{ font-size:14px; margin-top:16px;}
+  .letter-text p.lede{ font-size:14px; }
   .letter-text .sign{
     font-family:'Courier New', monospace; font-size:12px;
     letter-spacing:0.1em; text-transform:uppercase; color:rgba(255,255,255,0.7);
@@ -240,7 +234,6 @@
   </svg>
 
   <div class="building" id="building">
-    <div class="roof"></div>
     <span class="win w1"></span><span class="win w2"></span><span class="win w3"></span>
     <span class="win w4"></span><span class="win w5"></span><span class="win w6"></span>
     <span class="win w7"></span>
