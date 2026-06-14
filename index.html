@@ -14,7 +14,7 @@
     -webkit-user-select:none; user-select:none;
   }
 
-  /* ================= GRAIN (whole screen, very subtle) ================= */
+  /* Graining */
   .grain{
     position:fixed; inset:0; z-index:40; pointer-events:none;
     filter:url(#grainFilter);
@@ -25,7 +25,7 @@
     0%,100%{opacity:0.035;} 25%{opacity:0.06;} 50%{opacity:0.03;} 75%{opacity:0.05;}
   }
 
-  /* ================= THE BUILDING ================= */
+  /* Building sihlouette */
   .building{
     position:fixed; z-index:1;
     background-color:#0c0c10;
@@ -52,7 +52,7 @@
   .w6{ right:6%; top:60%; width:15%; height:12%; }
   .w7{ left:42%; top:80%; width:16%; height:18%; } /* entrance */
 
-  /* ================= TARGET OUTLINE ================= */
+  /* target blob hihi */
   .target-frame{
     position:fixed; z-index:3; pointer-events:none;
     border:1px dashed rgba(255,255,255,0.28);
@@ -60,7 +60,7 @@
   }
   body.mapped .target-frame{ opacity:0; }
 
-  /* ================= LIGHT LAYER (the projection) ================= */
+  /* light layer */
   .light-layer{
     position:fixed; inset:0; z-index:2;
     clip-path: polygon(0px 0px,0px 0px,0px 0px,0px 0px);
@@ -114,7 +114,7 @@
     animation: flicker 4s steps(6) infinite;
   }
 
-  /* ================= DRAG AREA (move whole shape) ================= */
+  /* add dragding */
   .drag-area{
     position:fixed; inset:0; z-index:4;
     clip-path: polygon(0px 0px,0px 0px,0px 0px,0px 0px);
@@ -125,7 +125,7 @@
   .drag-area:active{ cursor:grabbing; }
   body.mapped .drag-area{ pointer-events:none; }
 
-  /* ================= CORNER HANDLES ================= */
+  /* corner handles */
   .handle{
     position:fixed; z-index:5; width:26px; height:26px;
     margin:-13px 0 0 -13px; border-radius:50%;
@@ -144,7 +144,7 @@
   .h3{ color:#22d3ee; border-color:#22d3ee; box-shadow:0 0 16px #22d3eeaa; }
   body.mapped .handle{ opacity:0; pointer-events:none; }
 
-  /* ================= UI TEXT ================= */
+  /* text cl */
   .top-label{
     position:fixed; top:26px; left:30px; z-index:10;
     font-size:11px; letter-spacing:0.16em; text-transform:uppercase;
@@ -170,7 +170,7 @@
   body.mapped .reset-btn{ opacity:1; }
   .reset-btn:hover{ color:#fff; border-color:rgba(255,255,255,0.4); }
 
-  /* ================= LETTER — lives inside the projected light itself ================= */
+  /* letterlives inside the projected light itself */
   /* outer layer shares the exact same clip-path as the light/drag-area, so the
      text is only ever visible through the patch of light the user is moving —
      fragments while unmapped, the full letter once it lands on the building. */
